@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pypdf
+python-docx
+python-multipart
+spacy
+sentence-transformers
+scikit-learn
+groq
+python-dotenv
+streamlit
+requests

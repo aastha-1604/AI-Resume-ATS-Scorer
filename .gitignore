@@ -1,0 +1,32 @@
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Conda environment files
+*.conda
+
+# VS Code settings
+.vscode/
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Temporary uploaded files
+data/*.pdf
+data/*.docx
+
+# Generated reports
+reports/*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
