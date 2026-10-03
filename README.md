@@ -282,31 +282,7 @@ uploads/
 
 ---
 
-## 🧪 API Testing
 
-The backend can be tested independently using FastAPI Swagger UI.
-
-Start FastAPI:
-
-```bash
-uvicorn backend.main:app --reload
-```
-
-Then open:
-
-```text
-http://127.0.0.1:8000/docs
-```
-
-Select:
-
-```text
-POST /analyze
-```
-
-Upload a resume, enter a job description, and execute the request.
-
----
 
 ## 🌍 Deployment Architecture
 
@@ -332,77 +308,10 @@ Groq LLM
 Results
 ```
 
-For local development, the frontend API URL can be:
 
-```python
-API_URL = "http://127.0.0.1:8000/analyze"
-```
 
-For production deployment, replace it with the public backend URL:
 
-```python
-API_URL = "https://your-backend-url.com/analyze"
-```
 
----
-
-## ⚠️ Common Errors
-
-### Backend Error 422
-
-A `422` error usually means the frontend field names do not match the fields expected by FastAPI.
-
-For example, if FastAPI expects:
-
-```python
-resume: UploadFile = File(...)
-```
-
-the Streamlit request must use:
-
-```python
-files = {
-    "resume": (...)
-}
-```
-
-and not:
-
-```python
-files = {
-    "file": (...)
-}
-```
-
----
-
-### Backend Connection Error
-
-If Streamlit shows:
-
-```text
-Could not connect to the backend
-```
-
-make sure FastAPI is running:
-
-```bash
-uvicorn backend.main:app --reload
-```
-
----
-
-### Missing Groq API Key
-
-Make sure `.env` contains:
-
-```env
-GROQ_API_KEY=your_api_key
-```
-
-and that environment variables are loaded inside the backend.
-
----
 
 ## 📈 Future Improvements
 
