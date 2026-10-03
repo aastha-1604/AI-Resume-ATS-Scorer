@@ -111,40 +111,6 @@ Streamlit Dashboard
 
 ---
 
-## 🔄 Application Workflow
-
-```text
-Upload Resume
-      ↓
-Enter Job Description
-      ↓
-Streamlit sends POST request
-      ↓
-FastAPI receives Resume + JD
-      ↓
-Resume text is extracted
-      ↓
-Text is preprocessed
-      ↓
-Skills are extracted
-      ↓
-Resume skills are compared with JD skills
-      ↓
-Matched and Missing Skills are identified
-      ↓
-ATS Score is calculated
-      ↓
-Semantic Similarity is calculated
-      ↓
-Groq LLM generates recommendations
-      ↓
-FastAPI returns JSON response
-      ↓
-Streamlit displays results
-```
-
----
-
 ## 📂 Project Structure
 
 ```text
