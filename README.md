@@ -4,13 +4,6 @@ An AI-powered resume analysis application that compares a candidate's resume wit
 
 ---
 
-## 🚀 Live Application
-
-🔗 **Try the deployed application:**  
-[Add your Streamlit deployed link here]
-
----
-
 ## 📌 Project Overview
 
 The **AI Resume ATS Scorer** helps users evaluate how well their resume matches a particular job description.
