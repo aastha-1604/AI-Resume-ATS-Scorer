@@ -1,106 +1,88 @@
-# AI Resume ATS Scorer
+# 📄 AI Resume ATS Scorer
 
-An AI-powered resume analysis application that compares a candidate's resume with a job description using skill matching, semantic similarity, ATS scoring, and LLM-based recommendations.
+An AI-powered resume analysis application that compares a candidate's resume with a job description using **skill matching, semantic similarity, ATS scoring, and LLM-based recommendations**.
 
-## Try the Deployed Application
-
-🔗 **Live Application:** [Try AI Resume ATS Scorer](PASTE_YOUR_STREAMLIT_APP_LINK_HERE)
+The application provides an interactive **Streamlit frontend** connected to a **FastAPI backend**, allowing users to upload a resume, enter a job description, and receive an ATS-style analysis instantly.
 
 ---
 
-## Project Overview
+## 🚀 Features
 
-The AI Resume ATS Scorer helps users evaluate how well their resume matches a particular job description.
-
-Users can upload a **PDF or DOCX resume**, paste the target **job description**, and receive:
-
-- ATS Score
-- Matched Skills
-- Missing Skills
-- Semantic Similarity Score
-- Score Breakdown
-- AI-generated Resume Improvement Recommendations
-
----
-
-## Features
-
-- Upload resumes in PDF or DOCX format
-- Extract and preprocess resume text
-- Identify skills from resume and job description
-- Detect matched and missing skills
-- Calculate ATS compatibility score
-- Measure semantic similarity between resume and job description
-- Generate personalized improvement recommendations using Groq LLM
-- Interactive Streamlit user interface
-- FastAPI-based backend API
-- Input validation and API error handling
+- 📄 Upload resumes in PDF or DOCX format
+- 📝 Paste any job description
+- 🎯 Generate an ATS compatibility score
+- ✅ Identify matched skills
+- ❌ Identify missing skills
+- 🧠 Calculate semantic similarity between resume and job description
+- 🤖 Generate AI-based resume improvement recommendations using Groq LLM
+- 📊 Display score breakdown through an interactive Streamlit interface
+- ⚡ FastAPI-based backend API
+- 🔐 Environment-based API key management
+- 🛡️ Input validation and API error handling
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-**Programming Language**
+### Programming Language
 - Python
 
-**Frontend**
+### Frontend
 - Streamlit
 
-**Backend**
+### Backend
 - FastAPI
 - Uvicorn
 
-**NLP & AI**
+### NLP & AI
 - spaCy
 - Sentence Transformers
-- Groq LLM
+- Groq API
 
-**Other Libraries**
-- scikit-learn
-- NumPy
-- Requests
+### Resume Processing
 - PyPDF2
 - python-docx
-- python-dotenv
-- python-multipart
+
+### API Communication
+- Requests
+- REST API
+- Multipart Form Data
 
 ---
 
-## Project Architecture
+## 🔄 Project Workflow
 
 ```text
 User
-  │
-  ▼
+ │
+ ▼
 Streamlit Frontend
-  │
-  │ Resume + Job Description
-  ▼
+ │
+ ├── Upload Resume
+ └── Enter Job Description
+ │
+ ▼
+POST /analyze
+ │
+ ▼
 FastAPI Backend
-  │
-  ▼
-Resume Parsing
-  │
-  ▼
-Text Preprocessing
-  │
-  ▼
-Skill Extraction
-  │
-  ▼
-Skill Matching
-  │
-  ▼
-Semantic Similarity
-  │
-  ▼
-ATS Score Calculation
-  │
-  ▼
-Groq LLM Recommendations
-  │
-  ▼
+ │
+ ├── Resume Parsing
+ ├── Text Preprocessing
+ ├── Skill Extraction
+ ├── Skill Matching
+ ├── Semantic Similarity
+ ├── ATS Score Calculation
+ └── Groq LLM Recommendations
+ │
+ ▼
 JSON Response
-  │
-  ▼
+ │
+ ▼
 Streamlit Dashboard
+ │
+ ├── ATS Score
+ ├── Matched Skills
+ ├── Missing Skills
+ ├── Score Breakdown
+ └── AI Recommendations
